@@ -1,0 +1,20 @@
+{
+  "name": "handlebars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "task4.js",
+  "scripts": {
+    "start": "nodemon task4.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18127186/HandleBars.git"
+  },
+  "author": "TDP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/18127186/HandleBars/issues"
+  },
+  "homepage": "https://github.com/18127186/HandleBars#readme"
+}
