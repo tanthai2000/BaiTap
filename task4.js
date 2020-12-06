@@ -1,19 +1,9 @@
 var express = require('express');
-var app = express();
-
-app.use(express.static(__dirname));
-
-var hbs = require('express-handlebars');
-
-app.engine('hbs',hbs({
-    extname:'hbs',
-    defaultLayout: 'task4-detail',
-    layoutsDir: __dirname,
-    partialsDir: __dirname 
-}));
-app.set('view engine', 'hbs');
-
-app.get('/task4/:name',function(req,res){
+var router =express.Router();
+router.get('/',function(req,res){
+  res.sendFile(__dirname + '/task4.htm')
+})
+router.get('/:name',function(req,res){
     
     name = req.params
     name= Object.values(name);
@@ -141,9 +131,8 @@ app.get('/task4/:name',function(req,res){
         }
       ];
     const found = zodiacs.find(zodiac => zodiac.name == name)
+
     res.render('task4-hbs',found)
 });
 
-app.listen(5500,function(){
-    console.log('Server is listening on port 5500...');
-})
+module.exports = router;
